@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Inconsolata&family=Quicksand&family=Roboto+Slab:wght@200;300;400;500;900&family=Tsukimi+Rounded&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Scroll Bar  */
+:root {
+  --scrollbarBG: #dae2e6;
+  --thumbBG: #95aab4;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
+/* Font-Familys */
+.main-font {
+  font-family: "Roboto Slab", serif;
+}
+.sub-font {
+  font-family: "Roboto Slab", serif;
+}
+.sub-main-font {
+  font-family: "Roboto Slab", serif;
+}
+.sub-min-font {
+  font-family: "Roboto Slab", serif;
+}
+.min-font {
+  font-family: "Roboto Slab", serif;
+}
+.fa-ul {
+  font-family: "Courgette", cursive;
+}
+p {
+  font-family: "Tsukimi Rounded", sans-serif;
+}
+
+/* For Mobile Device */
+@media (max-width: 640px) {
+  ul {
+    padding: 0;
+  }
+  .text-7xl {
+    font-size: 3rem;
+  }
+  .text-4xl {
+    font-size: 2rem;
+  }
+  .mt-6 {
+    margin-top: 2rem;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
 }
