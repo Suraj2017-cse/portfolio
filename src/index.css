@@ -8,6 +8,7 @@ img {
   max-height: 100%;
 }
 
+
 /* Scroll Bar  */
 :root {
   --scrollbarBG: #dae2e6;
@@ -56,7 +57,7 @@ p {
 /* For Mobile Device */
 @media (max-width: 640px) {
   ul {
-    padding: 0;
+    padding: 0 !important;
   }
   .text-7xl {
     font-size: 3rem;
