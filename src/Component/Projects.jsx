@@ -35,12 +35,12 @@ const Projects = ({ links }) => {
                     <div className='flex gap-6'>
                       <Link
                         className='no-underline capitalize text-xl border border-slate-950 text-rose-600 hover:bg-rose-600 transition-all hover:text-white px-8 py-1 rounded-full'
-                        to={github_link}>
+                        to={github_link} target="_blank">
                         code
                       </Link>
                       <Link
                         className='no-underline capitalize text-xl border border-slate-950 text-rose-600 hover:bg-rose-600 transition-all hover:text-white px-8 py-1 rounded-full'
-                        to={live_link}>
+                        to={live_link} target="_blank">
                         Live
                       </Link>
                     </div>
