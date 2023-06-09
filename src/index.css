@@ -3,11 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  margin: 0 !important;
-  padding: 0 !important;
+* {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-} */
+}
 
 img {
   max-width: 100%;

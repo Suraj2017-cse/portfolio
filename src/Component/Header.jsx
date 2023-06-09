@@ -101,7 +101,7 @@ return (
       </li>
       <li onClick={handleGreenClick}
         className='w-7 h-7 bg-green-900 border-4 border-solid border-gray-500 rounded-full'></li>
-    </ul>
+    </ul> 
   </div>
 </>
 );
