@@ -7,8 +7,6 @@ const Home = () => {
 
   const handleClick = (e) => {
     setActiveLink(e);
-    console.log(e);
-    // console.log(activeLink(e));
   };
 
   return (

@@ -8,6 +8,6 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 const root = ReactDOM.createRoot(document.getElementById("portfolio"));
 root.render(
   <React.StrictMode>
-    <App />
+    <App />,
   </React.StrictMode>,
 );
