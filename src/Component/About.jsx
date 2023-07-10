@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { SocialMediaLinks } from "../MyData";
 
 const About = ({ links }) => {
+
   return (
     <>
       <section className={links === 1 ? "" : "hidden"} id='about'>
@@ -58,6 +59,7 @@ const About = ({ links }) => {
           })}
         </ul>
       </section>
+
     </>
   );
 };

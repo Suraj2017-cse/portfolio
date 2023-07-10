@@ -3,11 +3,11 @@ import { Projects_Data } from "../MyData";
 import { Link } from "react-router-dom";
 
 // Collect All Languages Categories
-const allLanguages = ['all', ...new Set(Projects_Data.map((item) =>item.language))]
+const allLanguages = ['All', ...new Set(Projects_Data.map((item) =>item.language))]
 
 const Projects = ({ links }) => {
   const [projectData, setProjectData] = useState(Projects_Data);
-  const [projectLang, setProjectLang] = useState(allLanguages);
+  const [projectLang, setProjectLang] = useState(allLanguages.sort());
 
   // Filter Project Item Categories
   const filterItem = (language) => {
@@ -47,7 +47,7 @@ const Projects = ({ links }) => {
                 title,
                 description,
                 img_link,
-                github_link,
+                code_link,
                 live_link,
               } = data;
               return (
@@ -64,7 +64,7 @@ const Projects = ({ links }) => {
                     <div className='flex gap-6'>
                       <Link
                         className='no-underline capitalize text-xl border border-slate-950 text-teal-900 hover:bg-teal-900 transition-all hover:text-white px-8 py-1 rounded-full'
-                        to={github_link}
+                        to={code_link}
                         target='_blank'>
                         code
                       </Link>
