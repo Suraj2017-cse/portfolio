@@ -5,7 +5,7 @@ const Certification = ({ links }) => {
   return (
     <>
       <section
-        className={links === 5 ? "flex flex-column md:mt-56 sm:mt-4" : "hidden"}
+        className={links === 5 ? "flex flex-column md:mt-56 sm:mt-4" : "show md:hidden sm:block sm:mt-4"}
         id='certification'>
         <div className='my-auto'>
           <h2 className='md:text-7xl mb-4 text-rose-800 uppercase main-font font-black'>

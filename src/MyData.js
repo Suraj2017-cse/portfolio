@@ -1,7 +1,7 @@
 import { BsLinkedin, BsGithub, BsInstagram, BsFacebook } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
 import { TbCertificate } from "react-icons/tb";
-import { AiFillProject } from "react-icons/ai";
+import { AiFillProject, AiFillMessage } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaAddressCard } from "react-icons/fa";
 import { SiEslgaming } from "react-icons/si";
@@ -38,9 +38,15 @@ const NavLinksItem = [
     name: "Projects",
     icon: <AiFillProject />,
   },
-  //  {
-  //     id : 4,
-  //     name : 'About',
+  {
+    id: 7,
+    name: "Contact Us",
+    icon: <AiFillMessage />,
+  },
+  // {
+  //   id : 4,
+  //   name : 'About',
+  //   icon:
   // },
 ];
 
@@ -85,8 +91,8 @@ const EducationData = [
   {
     id: 2,
     organisation: "BSEB PATNA",
-    stream: "10 WITH ALL SUBJECTS",
-    branch: "",
+    stream: "10th WITH ALL SUBJECTS", //add \u00b th to use sub tag check this working or not
+    branch: `10 ${(<sub>th</sub>)}`,
     marks: "58.40",
     duration: "April 2015 - May 2017",
   },
@@ -181,7 +187,8 @@ const Projects_Data = [
   {
     id: 2,
     title: "Form validation",
-    description: "This is a project description",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/form_validate.jpg",
     language: "javascript",
     code_link: "https://github.com/Suraj2017-cse/Form_Validate",
@@ -190,7 +197,8 @@ const Projects_Data = [
   {
     id: 3,
     title: "Health Plan",
-    description: "This is a project description",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/cairovision.jpg",
     language: "react",
     code_link: "https://github.com/Suraj2017-cse/cairo_vision",
@@ -199,7 +207,8 @@ const Projects_Data = [
   {
     id: 4,
     title: "Ascent Task",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/ascent.png",
     language: "HTML & CSS(Frameworks)",
     code_link: "https://github.com/Suraj2017-cse/Ascent_Task",
@@ -208,7 +217,8 @@ const Projects_Data = [
   {
     id: 5,
     title: "BSEB Online",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/bseb.png",
     language: "HTML & CSS(Frameworks)",
     code_link: "https://github.com/Suraj2017-cse/BSEB",
@@ -217,7 +227,8 @@ const Projects_Data = [
   {
     id: 6,
     title: "HRS Hi Tech",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/hrs-hi.png",
     language: "HTML & CSS(Frameworks)",
     code_link: "https://github.com/Suraj2017-cse/hrs-hi-tech-task",
@@ -226,7 +237,8 @@ const Projects_Data = [
   {
     id: 7,
     title: "D-Mart Clone",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/mart.png",
     language: "HTML & CSS(Frameworks)",
     code_link: "https://github.com/Suraj2017-cse/DmartClone",
@@ -235,7 +247,8 @@ const Projects_Data = [
   {
     id: 8,
     title: "TradeG Task",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/tradeG.png",
     language: "HTML & CSS(Frameworks)",
     code_link: "https://github.com/Suraj2017-cse/tradeG",
@@ -244,7 +257,8 @@ const Projects_Data = [
   {
     id: 9,
     title: "Dram sounds",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/dram-sound.png",
     language: "javascript",
     code_link: "https://replit.com/@sahsuraj/DramSong",
@@ -253,7 +267,8 @@ const Projects_Data = [
   {
     id: 10,
     title: "Dices Game",
-    description: "",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, qui necessitatibus laboriosam blanditiis dolores neque doloribus quibusdam iusto possimus modi error unde cumque ea aliquid aperiam aliquam ratione, nam vitae.",
     img_link: "asset/images/dicess.png",
     language: "javascript",
     code_link: "https://replit.com/@sahsuraj/Dicee",

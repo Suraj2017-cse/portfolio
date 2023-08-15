@@ -9,12 +9,12 @@ const About = ({ links }) => {
 
   return (
     <>
-      <section className={links === 1 ? "" : "hidden"} id='about'>
+      <section className={links === 1 ? "" : "show md:hidden sm:block"} id='about'>
         <div className='text-uppercase md:mt-40 sm:mt-4 '>
           <h1 className='text-cyan-950 lg:text-8xl md:text-7xl sm:text-6xl text-5xl'>
             Suraj <span className='text-cyan-800'>Kumar</span>
           </h1>
-          <div className='flex items-center gap-3 text-amber-500 flex-wrap'>
+          <div className='flex items-center gap-3 text-amber-500 flex-wrap mb-2'>
             <div className='flex items-center gap-2 text-xl cursor-pointer font-family'>
               <HiLocationMarker /> muzaffarpur,bihar.
             </div>
@@ -48,7 +48,7 @@ const About = ({ links }) => {
           {SocialMediaLinks.map(({ id, name, url, icon }) => {
             return (
               <li
-                className='bg-teal-600 rounded-full p-3 hover:bg-teal-300 cursor-pointer'
+                className='bg-teal-600 rounded-full p-3 hover:bg-teal-300 cursor-pointer hover:-translate-y-1 shadow-md shadow-red-500'
                 title={name}
                 key={id}>
                 <Link to={url} className='text-2xl text-white hover:text-white'>

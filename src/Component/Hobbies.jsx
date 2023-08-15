@@ -3,7 +3,7 @@ import React from "react";
 const Hobbies = ({ links }) => {
   return (
     <>
-      <section className={links === 4 ? "md:mt-56 sm:mt-4" : "hidden"}>
+      <section className={links === 4 ? "md:mt-56 sm:mt-4" : "show md:hidden sm:block sm:mt-4"}>
         <div className='flex flex-column '>
           <h2 className='md:text-7xl mb-4 text-rose-800 uppercase'>Hobbies</h2>
 

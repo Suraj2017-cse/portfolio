@@ -4,7 +4,7 @@ import { EducationData } from "../MyData";
 const Education = ({ links }) => {
   return (
     <>
-      <section className={links === 2 ? "mt-4" : "hidden"}>
+      <section className={links === 2 ? "mt-4" : "show md:hidden sm:block sm:mt-4"}>
         <h2 className='text-7xl mb-4 text-rose-800 uppercase main-font font-black'>
           EDUCATION
         </h2>

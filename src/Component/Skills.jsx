@@ -4,7 +4,7 @@ import { Skillset } from "../MyData";
 const Skills = ({ links }) => {
   return (
     <>
-      <section className={links === 3 ? "mt-4" : "hidden"}>
+      <section className={links === 3 ? "mt-4" : "show md:hidden sm:block sm:mt-4"}>
         <div className='my-auto'>
           <h2 className='mb-5 text-7xl text-rose-800 uppercase main-font font-black'>
             Skills
@@ -14,10 +14,9 @@ const Skills = ({ links }) => {
           <ul className='list-inline list-icons flex gap-2 flex-wrap'>
             {Skillset.map((data) => {
               const { id, name, title } = data;
-              const myClass = `${name} text-7xl hover:text-red-600 cursor-pointer`;
               return (
-                <li className='list-inline-item' key={id}>
-                  <i className={myClass} title={title}></i>
+                <li className='list-inline-item hover:-translate-y-2 shadow-md shadow-teal-200' key={id}>
+                  <i className={`${name} text-7xl hover:text-red-600 cursor-pointer`} title={title}></i>
                 </li>
               );
             })}

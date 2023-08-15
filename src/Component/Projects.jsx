@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Projects_Data } from "../MyData";
 import { Link } from "react-router-dom";
+import { BsGithub, BsLink } from "react-icons/bs";
 
 // Collect All Languages Categories
 const allLanguages = ['All', ...new Set(Projects_Data.map((item) =>item.language))]
@@ -11,7 +12,7 @@ const Projects = ({ links }) => {
 
   // Filter Project Item Categories
   const filterItem = (language) => {
-    if(language === 'all') {
+    if(language === 'All') {
       setProjectData(Projects_Data);
       return;
     }
@@ -23,7 +24,7 @@ const Projects = ({ links }) => {
 
   return (
     <>
-      <section className={links === 6 ? "mt-4" : "hidden"}>
+      <section className={links === 6 ? "mt-4" : "show md:hidden sm:block sm:mt-4"}>
         <div className='flex flex-column '>
           <h2 className='md:text-7xl mb-4 text-rose-800 uppercase'>Projects</h2>
 
@@ -33,7 +34,7 @@ const Projects = ({ links }) => {
               {
             projectLang.map((lang, index)=>{
               return(
-                <option value={lang} className="capitalize" key={index}>{lang}</option>
+                <option value={lang} className="capitalize text-white checked:bg-teal-700" key={index}>{lang}</option>
               )
             })
           }
@@ -63,23 +64,23 @@ const Projects = ({ links }) => {
                     <p>{description}</p>
                     <div className='flex gap-6'>
                       <Link
-                        className='no-underline capitalize text-xl border border-slate-950 text-teal-900 hover:bg-teal-900 transition-all hover:text-white px-8 py-1 rounded-full'
+                        className='no-underline text-4xl border p-2 bg-white text-red-500 hover:-translate-y-1 shadow-md shadow-red-500 rounded-full'
                         to={code_link}
                         target='_blank'>
-                        code
+                        <BsGithub />
                       </Link>
                       <Link
-                        className='no-underline capitalize text-xl border border-slate-950 text-teal-900 hover:bg-teal-900 transition-all hover:text-white px-8 py-1 rounded-full'
+                        className='no-underline text-4xl border p-2 bg-white text-red-500 hover:-translate-y-1 shadow-md shadow-red-500 rounded-full'
                         to={live_link}
                         target='_blank'>
-                        Live
+                        <BsLink />
                       </Link>
                     </div>
                   </div>
                   {/* Project Image */}
                   <div
-                    className={`md:col-span-6 sm:col-span-full flex md:justify-end sm:justify-center z-0 border-2 p-2 rounded-3xl
-            order-0 drop-shadow ${id % 2 === 0 ? "order-3" : "order-2"}`}>
+                    className={`md:col-span-6 sm:col-span-full flex md:justify-end sm:justify-center z-0 shadow-inner shadow-teal-700 hover:shadow-md drop-shadow  border-2 p-2 rounded-3xl
+            order-0 ${id % 2 === 0 ? "order-3" : "order-2"}`}>
                     <img
                       src={img_link}
                       alt={title}

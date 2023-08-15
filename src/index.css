@@ -14,7 +14,6 @@ img {
   max-height: 100%;
 }
 
-
 /* Scroll Bar  */
 :root {
   --scrollbarBG: #dae2e6;
@@ -39,7 +38,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
-
 
 /* Font-Familys */
 .main-font {
@@ -85,8 +83,18 @@ p {
   scale: 120%;
 }
 
+/* Project select   */
+select:focus {
+  outline: none;
+}
+
 /* For Mobile Device */
 @media (max-width: 640px) {
+  .show {
+    display: block;
+    margin-top: 1rem;
+  }
+
   ul {
     padding: 0 !important;
   }
@@ -94,7 +102,9 @@ p {
   .text-7xl {
     font-size: 3rem;
   }
-
+  .text-5xl {
+    font-size: 2.71rem;
+  }
   .text-4xl {
     font-size: 2rem;
   }
@@ -105,6 +115,10 @@ p {
 
   .w-full {
     width: 100%;
+    margin-top: 1rem;
+  }
+  .w-full .mt-4 {
+    margin-top: 1rem;
   }
 
   .mb-4 {
