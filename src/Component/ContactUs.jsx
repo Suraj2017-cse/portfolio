@@ -28,7 +28,7 @@ const ContactUs = ({ links }) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-    .then(() => alert("Form successfully submitted"))
+    .then(() => console.log(formData))//("Form successfully submitted"))
     .catch((error) => alert(error));
     }
     setValidated(true);
@@ -47,6 +47,8 @@ const ContactUs = ({ links }) => {
       <h2 className='md:text-7xl mb-4 text-rose-800 uppercase'>Contact Us</h2>
 
       <Form noValidate validated={validated} onSubmit={handleSubmit} name="contact" method="POST" data-netlify='true'>
+        <input type="hidden" name="form-name" value="contact" />
+
         <Row className='mb-3'>
           {/* Full Name  */}
           <Form.Group as={Col} md='6'>
