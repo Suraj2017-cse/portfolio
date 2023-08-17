@@ -5,6 +5,7 @@ import { AiFillProject, AiFillMessage } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaAddressCard } from "react-icons/fa";
 import { SiEslgaming } from "react-icons/si";
+import { RxResume } from "react-icons/rx";
 
 // Nav Links Item Component
 const NavLinksItem = [
@@ -76,6 +77,12 @@ const SocialMediaLinks = [
     url: "https://www.facebook.com/sahsuraj01",
     icon: <BsFacebook />,
   },
+  {
+    id: 5,
+    name: "Resume",
+    url: "https://resume.io/r/zDIRn4Vyk",
+    icon: <RxResume />,
+  },
 ];
 
 // Education Details
@@ -91,8 +98,7 @@ const EducationData = [
   {
     id: 2,
     organisation: "BSEB PATNA",
-    stream: "10th WITH ALL SUBJECTS", //add \u00b th to use sub tag check this working or not
-    branch: `10 ${(<sub>th</sub>)}`,
+    stream: "10th WITH ALL SUBJECTS",
     marks: "58.40",
     duration: "April 2015 - May 2017",
   },
@@ -105,6 +111,12 @@ const CertificationData = [
     organisation: "Naresh i technologies",
     course: "UI technologies",
     duration: "April 2020 - June-2020",
+  },
+  {
+    id: 2,
+    organisation: "Naresh i technologies",
+    course: "C Language",
+    duration: "November-2019 - December-2019",
   },
 ];
 

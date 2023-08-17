@@ -28,7 +28,7 @@ const ContactUs = ({ links }) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-    .then(() => console.log(formData))//("Form successfully submitted"))
+    .then(() => console.log('msg', formData))//("Form successfully submitted"))
     .catch((error) => alert(error));
     }
     setValidated(true);

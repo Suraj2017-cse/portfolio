@@ -5,7 +5,7 @@ const Certification = ({ links }) => {
   return (
     <>
       <section
-        className={links === 5 ? "flex flex-column md:mt-56 sm:mt-4" : "show md:hidden sm:block sm:mt-4"}
+        className={links === 5 ? "flex flex-column sm:mt-4" : "show md:hidden sm:block sm:mt-4"}
         id='certification'>
         <div className='my-auto'>
           <h2 className='md:text-7xl mb-4 text-rose-800 uppercase main-font font-black'>
@@ -15,7 +15,7 @@ const Certification = ({ links }) => {
           {CertificationData.map(({ id, organisation, course, duration }) => {
             return (
               <div
-                className='resume-item flex flex-column flex-md-row'
+                className='resume-item flex flex-column flex-md-row mb-12'
                 key={id}>
                 <div className='me-auto'>
                   <h3 className='mb-0 text-4xl uppercase sub-font font-medium'>
