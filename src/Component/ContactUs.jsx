@@ -9,6 +9,8 @@ const ContactUs = ({ links }) => {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
+    companyUrl: "",
+    phone: "",
     city: "",
     email: "",
     message: "",
@@ -21,10 +23,18 @@ const ContactUs = ({ links }) => {
       event.preventDefault();
       event.stopPropagation();
     }else{
-      console.log(formData);
+      fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => alert("Form successfully submitted"))
+    .catch((error) => alert(error));
     }
     setValidated(true);
-  };
+
+     
+};
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -38,15 +48,13 @@ const ContactUs = ({ links }) => {
 
       <Form noValidate validated={validated} onSubmit={handleSubmit} name="contact" method="POST" data-netlify='true'>
         <Row className='mb-3'>
-
           {/* Full Name  */}
-          <Form.Group as={Col} md='6' controlId='validationCustom01'>
+          <Form.Group as={Col} md='6'>
             <Form.Label>Full Name</Form.Label>
             <Form.Control
               required
               type='text'
               placeholder='Full Name'
-              autoComplete='off'
               name='name'
               onChange={handleChange}
               value={formData.name}
@@ -57,7 +65,7 @@ const ContactUs = ({ links }) => {
           </Form.Group>
 
           {/* Company Name  */}
-          <Form.Group as={Col} md='6' controlId='validationCustom02'>
+          <Form.Group as={Col} md='6'>
             <Form.Label>Company Name</Form.Label>
             <Form.Control
               required
@@ -72,10 +80,45 @@ const ContactUs = ({ links }) => {
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
-        <Row className='mb-3'>
 
+         <Row className='mb-3'>
+
+          {/* Company URL  */}
+          <Form.Group as={Col} md='6'>
+            <Form.Label>Company URL</Form.Label>
+            <Form.Control
+              required
+              type='url'
+              placeholder='https://www.company.com/'
+              name='companyUrl'
+              onChange={handleChange}
+              value={formData.companyUrl}
+            />
+            <Form.Control.Feedback type='invalid'>
+              Please Provid a URL!
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          {/* Mobile No.  */}
+          <Form.Group as={Col} md='6'>
+            <Form.Label>Mobile Number</Form.Label>
+            <Form.Control
+              required
+              type='tel'
+              placeholder='Mobile Number'
+              name='phone'
+              onChange={handleChange}
+              value={formData.phone}
+            />
+            <Form.Control.Feedback type='invalid'>
+              Please Provid a Company Name!
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Row>
+
+        <Row className='mb-3'>
           {/* City  */}
-          <Form.Group as={Col} md='6' controlId='validationCustom03'>
+          <Form.Group as={Col} md='6'>
             <Form.Label>City</Form.Label>
             <Form.Control type='text' placeholder='City' required name="city"
             onChange={handleChange}
@@ -89,8 +132,7 @@ const ContactUs = ({ links }) => {
           <Form.Group
             as={Col}
             md='6'
-            className='mb-3'
-            controlId='exampleForm.ControlInput1'>
+            className='mb-3'>
             <Form.Label>Email address</Form.Label>
             <Form.Control type='email' placeholder='name@email.com' required name="email"
             onChange={handleChange}
