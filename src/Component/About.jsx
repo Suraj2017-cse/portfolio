@@ -5,24 +5,24 @@ import { GrMail } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { SocialMediaLinks } from "../MyData";
 
-const About = ({ links }) => {
+const About = () => {
 
   return (
     <>
-      <section className={links === 1 ? "" : "show md:hidden sm:block"} id='about'>
-        <div className='text-uppercase md:mt-40 sm:mt-4 '>
-          <h1 className='text-cyan-950 lg:text-8xl md:text-7xl sm:text-6xl text-5xl'>
+      <section>
+        <div className='text-uppercase md:mt-40 sm:mt-4 max-[639px]:mt-4'>
+          <h1 className='text-cyan-950 lg:text-8xl md:text-7xl sm:text-6xl max-[639px]:text-4xl'>
             Suraj <span className='text-cyan-800'>Kumar</span>
           </h1>
-          <div className='flex items-center gap-3 text-amber-500 flex-wrap mb-2'>
-            <div className='flex items-center gap-2 text-xl cursor-pointer font-family'>
+          <div className='flex items-center gap-3 text-amber-500 font-["Quicksand"] flex-wrap mb-2'>
+            <div className='flex items-center gap-2 text-xl cursor-pointer font-["Quicksand"]'>
               <HiLocationMarker /> muzaffarpur,bihar.
             </div>
             <div className='flex items-center gap-2'>
               <BsFillTelephoneFill />
               <Link
                 to='tel: 7067532076'
-                className='text-amber-500 text-xl hover:text-amber-400'>
+                className='text-amber-500 font-["Quicksand"] text-xl hover:text-amber-400'>
                 (+91)7067532076
               </Link>
             </div>
@@ -30,7 +30,7 @@ const About = ({ links }) => {
               <GrMail />
               <Link
                 to='mailto:sahsuraj2001@gmail.com'
-                className='text-amber-500 text-xl hover:text-amber-400'>
+                className='text-amber-500 font-["Quicksand"] text-xl hover:text-amber-400'>
                 sahsuraj2001@gmail.com
               </Link>
             </div>

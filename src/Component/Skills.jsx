@@ -1,10 +1,11 @@
 import React from "react";
 import { Skillset } from "../MyData";
 
-const Skills = ({ links }) => {
+const Skills = () => {
   return (
     <>
-      <section className={links === 3 ? "mt-4" : "show md:hidden sm:block sm:mt-4"}>
+      <section 
+      >
         <div className='my-auto'>
           <h2 className='mb-5 text-7xl text-rose-800 uppercase main-font font-black'>
             Skills

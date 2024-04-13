@@ -5,7 +5,10 @@ import { AiFillProject, AiFillMessage } from "react-icons/ai";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaAddressCard } from "react-icons/fa";
 import { SiEslgaming } from "react-icons/si";
-import { RxResume } from "react-icons/rx";
+import { MdWorkHistory } from "react-icons/md";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
+// import { RxResume } from "react-icons/rx";
 
 // Nav Links Item Component
 const NavLinksItem = [
@@ -21,33 +24,38 @@ const NavLinksItem = [
   },
   {
     id: 3,
+    name: "Experience",
+    icon: <MdWorkHistory />,
+  },
+  {
+    id: 4,
     name: "Skills",
     icon: <GiSkills />,
   },
   {
-    id: 4,
+    id: 5,
     name: "Hobbies",
     icon: <SiEslgaming />,
   },
   {
-    id: 5,
+    id: 6,
     name: "Certifications",
     icon: <TbCertificate />,
   },
   {
-    id: 6,
+    id: 7,
     name: "Projects",
     icon: <AiFillProject />,
   },
   {
-    id: 7,
+    id: 8,
     name: "Contact Us",
     icon: <AiFillMessage />,
   },
   // {
-  //   id : 4,
-  //   name : 'About',
-  //   icon:
+  //   id: 8,
+  //   name: "Experience",
+  //   icon: <MdWorkHistory />,
   // },
 ];
 
@@ -77,12 +85,12 @@ const SocialMediaLinks = [
     url: "https://www.facebook.com/sahsuraj01",
     icon: <BsFacebook />,
   },
-  {
-    id: 5,
-    name: "Resume",
-    url: "https://resume.io/r/zDIRn4Vyk",
-    icon: <RxResume />,
-  },
+  // {
+  //   id: 5,
+  //   name: "Resume",
+  //   url: "https://resume.io/r/zDIRn4Vyk",
+  //   icon: <RxResume />,
+  // },
 ];
 
 // Education Details
@@ -101,6 +109,47 @@ const EducationData = [
     stream: "10th WITH ALL SUBJECTS",
     marks: "58.40",
     duration: "April 2015 - May 2017",
+  },
+];
+
+const ExperienceData = [
+  {
+    id: 1,
+    company: "cairo vision",
+    position: "software developer Intern",
+    desc1:
+      "Coded using HTML, CSS, and JavaScript to develop features for both mobile and desktop platforms.",
+    desc2:
+      "Designed and executed security measures such as firewalls and encryption.",
+    desc3:
+      "Guided customers on project stages and iterations with input on best practices, user needs, and technology capabilities.",
+    duration: "January 2024 - present",
+    icon: <FaLongArrowAltRight />,
+  },
+  {
+    id: 2,
+    company: "renu sb creation",
+    position: "web developer",
+    desc1:
+      "Developed organizational skills through managing multiple tasks simultaneously while adhering to strict deadlines.",
+    desc2:
+      "Collaborated with senior management on new initiatives to build confidence.",
+    desc3:
+      "Learned and adapted quickly to new technology and software applications.",
+    duration: "April 2021 - March 2022",
+    icon: <FaLongArrowAltRight />,
+  },
+  {
+    id: 3,
+    company: "xira infotech",
+    position: "mobile application developer",
+    desc1:
+      "We performed unit testing of web applications and troubleshooting issues.",
+    desc2:
+      "She conceived and built optimized landing pages in HTML and CSS for integration and cross-browser compatibility.",
+    desc3: "",
+    duration: "August 2019 - september 2019",
+    icon: <FaLongArrowAltRight />,
   },
 ];
 
@@ -319,6 +368,7 @@ export {
   NavLinksItem,
   SocialMediaLinks,
   EducationData,
+  ExperienceData,
   CertificationData,
   Skillset,
   Projects_Data,

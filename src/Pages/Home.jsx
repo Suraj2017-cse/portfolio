@@ -3,16 +3,17 @@ import Header from "../Component/Header";
 import MainItem from "../Component/MainItem";
 
 const Home = () => {
-  const [activeLink, setActiveLink] = useState(1);
+  const [activeTab, setActiveTab] = useState('About');
 
-  const handleClick = (e) => {
-    setActiveLink(e);
+  // Function For Changing the tab according to User Selection default Selection is About Tab 
+  const handleSelectionChange = (tab) => {
+    setActiveTab(tab);
   };
 
   return (
     <div className='d-md-flex'>
-      <Header handleClick={handleClick} />
-      <MainItem link={activeLink} />
+      <Header onSelectionChange={handleSelectionChange} />
+      <MainItem activeTab={activeTab} />
     </div>
   );
 };

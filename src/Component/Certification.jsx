@@ -1,14 +1,12 @@
 import React from "react";
 import { CertificationData } from "../MyData";
 
-const Certification = ({ links }) => {
+const Certification = () => {
   return (
     <>
-      <section
-        className={links === 5 ? "flex flex-column sm:mt-4" : "show md:hidden sm:block sm:mt-4"}
-        id='certification'>
+      <section>
         <div className='my-auto'>
-          <h2 className='md:text-7xl mb-4 text-rose-800 uppercase main-font font-black'>
+          <h2 className='md:text-7xl max-[639px]:text-4xl text-rose-800 uppercase font-["Roboto Slab"] font-black'>
             Certifications
           </h2>
 
@@ -21,12 +19,12 @@ const Certification = ({ links }) => {
                   <h3 className='mb-0 text-4xl uppercase sub-font font-medium'>
                     {course}
                   </h3>
-                  <div className='mb-3 text-2xl uppercase text-gray-400 sub-min-font font-light'>
+                  <div className='mb-3 text-2xl uppercase text-gray-400 font-["Roboto Slab"] font-light'>
                     {organisation}
                   </div>
                 </div>
                 <div className='md:text-end'>
-                  <span className='text-teal-800 sub-min-font font-light'>
+                  <span className='text-teal-800 font-["Roboto Slab"] font-light'>
                     {duration}
                   </span>
                 </div>
@@ -34,7 +32,6 @@ const Certification = ({ links }) => {
             );
           })}
         </div>
-        {/* <hr  className="md:mt-56 mt-6" /> */}
       </section>
     </>
   );
