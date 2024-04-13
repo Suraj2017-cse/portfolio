@@ -43,7 +43,7 @@ return (
         </select>
       </div>
 
-      <ul className='flex flex-col gap-4'>
+      <ul className='flex flex-col gap-4 p-0'>
         {projectData.map((data) => {
         const {
         id,
