@@ -52,7 +52,6 @@
 }
 
 .dark-mode h2,
-.dark-mode a,
 .dark-mode .bg-teal-600,
 .dark-mode .bg-teal-800,
 .dark-mode .text-teal-800,
@@ -97,7 +96,6 @@
 }
 
 .lime-mode h2,
-.lime-mode a,
 .lime-mode .bg-teal-800,
 .lime-mode .text-teal-800,
 .lime-mode .text-gray-400,
@@ -141,7 +139,6 @@
 }
 
 .green-mode h2,
-.green-mode a,
 .green-mode .bg-teal-800,
 .green-mode .text-teal-800,
 .green-mode .text-gray-400,
