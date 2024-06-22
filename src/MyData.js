@@ -116,14 +116,14 @@ const ExperienceData = [
   {
     id: 1,
     company: "cairo vision",
-    position: "software developer Intern",
+    position: "software developer Trainee",
     desc1:
       "Coded using HTML, CSS, and JavaScript to develop features for both mobile and desktop platforms.",
     desc2:
       "Designed and executed security measures such as firewalls and encryption.",
     desc3:
       "Guided customers on project stages and iterations with input on best practices, user needs, and technology capabilities.",
-    duration: "January 2024 - present",
+    duration: "January 2024 - Present",
     icon: <FaLongArrowAltRight />,
   },
   {
